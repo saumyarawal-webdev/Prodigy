@@ -5,23 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 </head>
 <body>
     <div class="card">
         <div class="search">
-            <input type="text" name="" id="" placeholder="enter city name" spellcheck="false">
-            <button><img src="images/search.png"></button>
+            <input type="text" name="" id="city" placeholder="enter city name" spellcheck="false">
+            <button onclick="fetchWeather()"><img src="images/search.png"></button>
         </div>
-        <div class="weather">
-            <img src="images/rain.png" class="weather-icon">
-            <h1 class="temp">22&#8451;</h1>
-            <h2 class="city">Mumbai</h2>
+        <div class="errormsg">
+            <ul id="err">
+                Invalid City
+                <li>check the typo error.</li>
+            </ul>
+        </div>
+        <div class="weather" id="weather">
+            <img src="images/rain.png" class="weather-icon" id="wimg">
+            <h1 class="temp"><span id="temp">22</span>&#8451;</h1>
+            <h2 class="city" id="cityname">Mumbai</h2>
             <div class="details">
                 <div class="col">
                     <img src="images/humidity.png" alt="">
                     <div>
                         <p class="humidity">
-                            50%
+                            <span id="humidity">
+                                50
+                            </span>
+                            %
                         </p>
                         <p>Humidity</p>
                     </div>
@@ -30,7 +40,7 @@
                     <img src="images/wind.png" alt="">
                     <div>
                         <p class="wind">
-                            15 km/h
+                            <span id="wind">15</span>km/h
                         </p>
                         <p>Wind Speed</p>
                     </div>
@@ -39,5 +49,7 @@
         </div>
     </div>
     <script src="js/script.js"></script>
+
+   
 </body>
 </html>

@@ -60,11 +60,25 @@ body{
     margin-top: 30px;
 }
 
+.weather{
+    display: none;
+}
 .weather h1{
     font-size: 80px;
     font-weight: 500;
 }
 
+.errormsg{
+    text-align: left;
+    font-size: 27px;
+    margin-top: 15px;
+    display: none;
+}
+
+#err li{
+    font-size: 16px;
+    margin-left: 23px;
+}
 .weather h2{
     font-size: 45px;
     font-weight: 400;
