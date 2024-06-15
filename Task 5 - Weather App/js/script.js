@@ -33,38 +33,46 @@ const options = {
 
 try {
 	const response = await fetch(url, options);
-    
-	const result = await response.text();
-	console.log(result);
-    document.querySelector('.weather').style.display='block';
-    let obj=JSON.parse(result);
-    console.log("cloud_pct : "+obj.cloud_pct);
-    let cityname=document.getElementById('cityname');
-    let temp=document.getElementById('temp');
-    let humidity=document.getElementById('humidity');
-    let wind=document.getElementById('wind');
-    temp.innerText=obj.temp;
-    let cityC=city.charAt(0).toUpperCase() + city.slice(1);
-    cityname.innerText=cityC;
-    humidity.innerText=obj.humidity;
-    wind.innerText=obj.wind_speed;
-    let wimg=document.getElementById('wimg');
-   
-    const weatherImages = {
-        'clouds.png': [76, 100],
-        'mist.png': [51, 75],
-        'drizzle.png': [26, 50],
-        'snow.png': [-1, 20],
-        'rain.png': [81, 100],
-        'clear.png': [0, 25]
-      };
-      const cloudPct=obj.cloud_pct;
-      for (const [image, ranges] of Object.entries(weatherImages)) {
-        if (cloudPct >= ranges[0] && cloudPct <= ranges[1]) {
-          wimg.src = `images/${image}`;
-          
-        }
-      }
+    if(response.status==400){
+      document.querySelector('.errormsg').style.display="block";
+      document.querySelector('.weather').style.display="none";
+    }
+    else{
+      document.querySelector('.weather').style.display="block";
+      document.querySelector('.errormsg').style.display="none";
+      const result = await response.text();
+      
+        document.querySelector('.weather').style.display='block';
+        let obj=JSON.parse(result);
+        
+        let cityname=document.getElementById('cityname');
+        let temp=document.getElementById('temp');
+        let humidity=document.getElementById('humidity');
+        let wind=document.getElementById('wind');
+        temp.innerText=obj.temp;
+        let cityC=city.charAt(0).toUpperCase() + city.slice(1);
+        cityname.innerText=cityC;
+        humidity.innerText=obj.humidity;
+        wind.innerText=obj.wind_speed;
+        let wimg=document.getElementById('wimg');
+       
+        const weatherImages = {
+            'clouds.png': [76, 100],
+            'mist.png': [51, 75],
+            'drizzle.png': [26, 50],
+            'snow.png': [-1, 20],
+            'rain.png': [81, 100],
+            'clear.png': [0, 25]
+          };
+          const cloudPct=obj.cloud_pct;
+          for (const [image, ranges] of Object.entries(weatherImages)) {
+            if (cloudPct >= ranges[0] && cloudPct <= ranges[1]) {
+              wimg.src = `images/${image}`;
+              
+            }
+          }
+    }
+
     
 
 } catch (error) {
