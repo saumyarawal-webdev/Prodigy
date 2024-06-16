@@ -4,14 +4,16 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
+.gameInfo{
+    padding: 20px;
+}
 #navbar {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 55px;
-    background-color: #511869;
+    background-color: #b8611ef8;
 }
 
 
@@ -106,7 +108,7 @@
 }
 
 .line{
-    background-color: #511869;
+    background-color: black;
    height: 3px;
     width:0vw; 
     position: absolute;
