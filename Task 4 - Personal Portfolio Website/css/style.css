@@ -161,6 +161,13 @@ font-weight: 560;
 
 .tab-contents ul li span a{
     color:#ffad33;
-    
     text-decoration: none;
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
 }

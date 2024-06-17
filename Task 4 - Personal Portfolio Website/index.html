@@ -35,24 +35,24 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, laudantium earum voluptas facere ratione quas autem odit rerum nemo cum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, nulla. Pariatur dolorum nostrum fuga corporis labore numquam expedita adipisci nisi minima, architecto alias ad quas sequi perferendis rerum. Facilis tempore praesentium blanditiis voluptate, exercitationem quod facere tempora porro vitae neque!</p>
 
                   <div class="tab-titles">
-                    <p class="tab-links active-link">Skills</p>
-                    <p class="tab-links">Experience</p>
-                    <p class="tab-links">Education</p>
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
                   </div>
-                  <div class="tab-contents">
+                  <div class="tab-contents active-tab" id="skills">
                     <ul>
                       <li><span>Backend</span><br>Development/Python/PHP</li>
                       <li><span>Frontend</span><br>Development/ReactJs</li>
                       <li><span>SEO</span><br>On Page/Off Page</li>
                     </ul>
                   </div>
-                  <div class="tab-contents">
+                  <div class="tab-contents" id="experience">
                     <ul>
-                      <li><span>June,2024 - Current</span><br>Web Development Intern at <span><a href="https://prodigyinfotech.dev/">ProdigyInfoTech</a></span></li>
-                      <li><span>May,2024</span><br>Completed SEO Internship at <span><a href="https://ignitax.com/">Ignitax</a></span></li>
+                      <li><span>June, 2024 - Current</span><br>Web Development Intern at <span><a href="https://prodigyinfotech.dev/">ProdigyInfoTech</a></span></li>
+                      <li><span>May, 2024</span><br>Completed SEO Internship at <span><a href="https://ignitax.com/">Ignitax</a></span></li>
                     </ul>
                   </div>
-                  <div class="tab-contents">
+                  <div class="tab-contents" id="education">
                     <ul>
                       <li><span>2022 - 2024 - Current</span><br>Pursuing Degree - Information Technology at GTU</li>
                       <li><span>2019 - 2022</span><br>Completed Diploma - Information Technology at GTU</li>
@@ -62,5 +62,6 @@
             </div>
         </div>
     </div>
+    <script src="js/index.js"></script>
   </body>
 </html>
