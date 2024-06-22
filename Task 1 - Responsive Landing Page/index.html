@@ -7,20 +7,25 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <nav class="navbar background">
-      <ul class="nav-list">
+    <nav class="navbar background h-nav-resp">
+      <ul class="nav-list v-class-resp">
         <div class="logo"><img src="images/logo.png" alt="Logo" /></div>
         <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
+        <li><a href="#secFirst">About</a></li>
+        <!-- <li><a href="#services">Services</a></li> -->
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <div class="rightNav">
+      <div class="rightNav v-class-resp">
         <input type="text" name="search" id="search" />
         <button class="btn btn-sm">Search</button>
       </div>
+      <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
     </nav>
-    <section class="background firstSection">
+    <section class="background firstSection" id="home">
       <div class="box-main">
         <div class="firstHalf">
           <p class="text-big">The Future of Education is here.</p>
@@ -30,8 +35,8 @@
             aperiam expedita quos deleniti, laboriosam qui!
           </p>
           <div class="buttons">
-            <button class="btn">Button 1</button>
-            <button class="btn">Button 2</button>
+            <button class="btn">Subscribe</button>
+            <button class="btn">More Info</button>
           </div>
         </div>
         <div class="secondHalf">
@@ -39,7 +44,7 @@
         </div>
       </div>
     </section>
-    <section class="secRight">
+    <section class="secRight" id="secFirst">
       <div class="paras">
         <p class="sectionTag text-big">Education in India covers...</p>
         <p class="sectionSubTag text-small">
@@ -54,9 +59,9 @@
         <img src="images/img1.jfif" alt="logo image" class="imgFluid" />
       </div>
     </section>
-
+    
     <section class="secRight secLeft">
-      <div class="paras">
+      <div class="paras" id="sesSec">
         <p class="sectionTag text-big">Education in India</p>
         <p class="sectionSubTag text-small">
           Education in India is primarily managed by the state-run public
@@ -73,7 +78,7 @@
       </div>
     </section>
 
-    <section class="secRight">
+    <section class="secRight" id="thirdSec">
       <div class="paras">
         <p class="sectionTag text-big">
           Challanges faced by Education of India
@@ -99,7 +104,7 @@
       </div>
     </section>
 
-    <section class="contact">
+    <section class="contact" id="contact">
       <h1 class="text-center">Contact Us</h1>
       <div class="form">
         <input
@@ -138,5 +143,6 @@
     </section>
 
     <footer class="footer-center background">Copyright &copy;2024 | All rights reserved</footer>
+    <script src="js/resp.js"></script>
   </body>
 </html>

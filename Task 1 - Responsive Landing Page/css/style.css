@@ -5,6 +5,9 @@
   padding: 0;
 }
 
+html{
+scroll-behavior: smooth;
+}
 .logo {
   width: 20%;
   display: flex;
@@ -127,7 +130,7 @@
 }
 
 .secRight {
-  height: 400px;
+  
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -151,7 +154,6 @@
 .sectionTag {
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
-
   padding: 14px 0;
 }
 
@@ -164,7 +166,7 @@
 
 .contact {
   background-color: rgba(214, 209, 209, 0.7);
-  height: 80vh;
+  height: 85vh;
 }
 
 .text-center {
@@ -176,7 +178,7 @@
 
 .form {
   margin: 25px auto;
-  max-width: 1200px;
+  max-width: 62%;
 }
 
 .form-input {
@@ -201,4 +203,87 @@
   display: flex;
   justify-content: center;
   color: #fff;
+
 }
+
+.burger{
+  position: absolute;
+  cursor: pointer;
+  right:5%;
+  top:15px;
+  
+  
+}
+.line{
+  width: 33px;
+  background-color: #fff;
+  height: 4px;
+  margin: 5px 3px;
+  display: none;
+}
+
+#thirdSec{
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width:1074px) {
+  .nav-list{
+    flex-direction: column;
+  }
+
+  .navbar{
+    flex-direction: column;
+    height: 478px;
+    transition: all 0.7s ease-in-out;
+  }
+
+  .rightNav{
+    text-align: center;
+  }
+
+  #search{
+    width: 100%;
+  }
+
+  .line{
+    display: block;
+  }
+
+  .h-nav-resp{
+    height: 72px;
+  }
+
+  .v-class-resp{
+    opacity: 0;
+  }
+
+  .box-main{
+    flex-direction: column-reverse;
+    max-width: 100%;
+  }
+
+  #thirdSec{
+    margin-top: 50px;
+    margin-bottom: 80px;
+  }
+
+  .secRight{
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width:789px){
+  
+   .secRight{
+    flex-direction: column;
+  }
+
+  .paras{
+    padding: 0;
+  }
+  
+}
+
+
+
+
