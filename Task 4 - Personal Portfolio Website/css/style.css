@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: #080808;
     color:#fff;
@@ -375,4 +379,76 @@ form .btn2{
     background: #262626;
     font-weight: 300;
     margin-top: 20px;
+}
+
+nav svg{
+    display: none;
+}
+
+#resp-logo{
+    display: none;
+}
+/* -------------------- responsive css-------------- */
+@media only screen and (max-width:621px) {
+   
+    .header-text{
+        margin-top: 60%;
+        font-size: 16px;
+    }
+
+    .header-text h1{
+        font-size: 30px;
+    }
+
+    nav svg{
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul{
+        background: #ffbd59;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul svg{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+
+    .about-col-1{
+        margin-bottom: 25px;
+    }
+
+    .about-col-2{
+        font-size: 18px;
+    }
+
+    .tab-links{
+        font-size: 14px;
+        margin-right: 20px;
+    }
+
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
 }
